@@ -24,17 +24,26 @@
       <thead>
         <tr>
           <!-- A table header tag with the content "Name" -->
-
+          <th>Name</th>
           <!-- A table header tag with the content "Age" -->
-
+          <th>Age</th>
           <!-- A table header tag with the content "Pronouns" -->
+          <th>Pronouns</th>
         </tr>
       </thead>
       <!--
         The whole tbody, for loop, tr, and td tags to show
         each person's name, age, and pronouns.
       -->
-
+      <tbody>
+        {% for person in people %}
+        <tr>
+          <td>{{ person.name }}</td>
+          <td>{{ person.age }}</td>
+          <td>{{ person.pronouns }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
   </main>
 </body>

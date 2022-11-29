@@ -19,13 +19,15 @@
       -->
       <ol>
         <!-- for each name in names -->
+        {% for name in names %}
 
           <!-- if name|length > 3 -->
-
+          {% if name|length > 3 %}
             <li>{{ name }}</li>
           <!-- end if -->
-
+          {% endif %}
         <!-- end for -->
+        {% endfor %}
 
       </ol>
     </main>

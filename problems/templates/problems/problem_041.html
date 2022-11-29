@@ -34,6 +34,20 @@ to look at.
 <body>
   <main>
     <h1>Pet owners</h1>
+    <ul>
+      {% for person in people %}
+      {% if person.pets.all|length > 0 %}
+      <li>
+        {{ person.name }}
+        <ul>
+        {% for pet_name in person.pets.all %}
+          <li>{{ pet_name }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endif %}
+      {% endfor %}
+    </ul>
   </main>
 </body>
 </html>

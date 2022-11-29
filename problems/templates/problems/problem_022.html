@@ -20,6 +20,11 @@
       item where each EVEN item is grey and the
       ODD ones aren't.
 -->
+        <ul>
+            {% for name in names %}
+            <li class="{% cycle "" "grey" %}">{{ name }}</li>
+            {% endfor %}
+        </ul>
         </main>
     </body>
 </html>

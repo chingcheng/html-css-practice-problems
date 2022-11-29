@@ -32,16 +32,18 @@
       </thead>
       <tbody>
         <!-- for each person in people -->
+        {% for person in people %}
 
           <!-- The table row open tag -->
-
+          <tr>
             <td>{{ person.name }}</td>
             <td>{{ person.age }}</td>
             <td>{{ person.pronouns }}</td>
+          </tr>
           <!-- The table row close tag -->
 
         <!-- end for -->
-
+        {% endfor %}
       </tbody>
     </table>
   </main>

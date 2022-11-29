@@ -22,12 +22,26 @@
     -->
     <table>
       <!-- Just the whole table head, here -->
-
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Pronouns</th>
+        </tr>
+      </thead>
       <!--
         The whole tbody, for loop, tr, and td tags to show
         each person's name, age, and pronouns.
       -->
-
+      <tbody>
+        {% for person in people %}
+        <tr>
+          <td>{{ person.name }}</td>
+          <td>{{ person.age }}</td>
+          <td>{{ person.pronouns }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
     </table>
   </main>
 </body>
